@@ -1,0 +1,26 @@
+{
+  "name": "e1-toneanalyzer",
+  "version": "1.0.0",
+  "description": "By: Luis Ricardo Díaz Flores",
+  "main": "tone-analyzer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricardodf/E1-ToneAnalyzer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ricardodf/E1-ToneAnalyzer/issues"
+  },
+  "homepage": "https://github.com/ricardodf/E1-ToneAnalyzer#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "ibm-watson": "^6.0.3",
+    "path": "^0.12.7"
+  }
+}
