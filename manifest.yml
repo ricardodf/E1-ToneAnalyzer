@@ -1,0 +1,5 @@
+---
+applications:
+ - name: is714522-cloud-foundry
+   command: 
+   memory: 128M
