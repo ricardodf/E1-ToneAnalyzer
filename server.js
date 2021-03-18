@@ -15,7 +15,7 @@ app.use(bodyParser.json())
 const toneAnalyzer = new ToneAnalyzerV3({
   version: '2017-09-21',
   authenticator: new IamAuthenticator({
-    apikey: process.env.TONE_ANALYZER_IAM_APIKEY || 'b2LmQMaFivFV_bjG4AEk1AN_-TeD9of3SxBL50_W6sdx',
+    apikey: process.env.TONE_ANALYZER_IAM_APIKEY,
   }),
   serviceUrl: process.env.TONE_ANALYZER_URL,
 });
@@ -31,7 +31,7 @@ app.post('/tone', async function(req, res, next) {
       res.send(result);
     })
     .catch(err => {
-      console.log('error:', err);
+      res.send(err);
     });
 })
 
