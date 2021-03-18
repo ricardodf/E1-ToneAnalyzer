@@ -1,7 +1,10 @@
 var express = require("express");
+var cors = require('cors')
 var app = express();
 var bodyParser = require('body-parser')
 require('dotenv').config()
+
+app.use(cors())
 
 const ToneAnalyzerV3 = require('ibm-watson/tone-analyzer/v3');
 const { IamAuthenticator } = require('ibm-watson/auth');
@@ -15,7 +18,7 @@ app.use(bodyParser.json())
 const toneAnalyzer = new ToneAnalyzerV3({
   version: '2017-09-21',
   authenticator: new IamAuthenticator({
-    apikey: process.env.TONE_ANALYZER_IAM_APIKEY,
+    apikey: process.env.TONE_ANALYZER_APIKEY,
   }),
   serviceUrl: process.env.TONE_ANALYZER_URL,
 });
